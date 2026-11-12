@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: mail-service
+  kafka:
+    bootstrap-servers: localhost:9092
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: your-email@gmail.com
+    password: your-app-password
+server:
+  port: 8083

@@ -1,0 +1,30 @@
+jwt:
+  token:
+    secret: your-jwt-secret-key
+    subject: email
+    issuer: cloudfiles
+cloud:
+  aws:
+    bucket:
+      name: your-bucket-name
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+    credentials:
+      access-key: your-access-key
+      secret-key: your-secret-key
+spring:
+  datasource:
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/fs
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+kafka:
+  greeting:
+    prefix: http://localhost:8080/api/v1/user
